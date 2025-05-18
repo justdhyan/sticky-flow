@@ -1,4 +1,5 @@
- # StickyFlow – Organize your thoughts, Supercharge Your Productivity 🧠⚡
+ # StickyFlow 
+## Organize your thoughts, Supercharge Your Productivity 🧠⚡
 
 ### A sleek, modern note and task management web app.  
 StickyFlow is a minimalist productivity tool designed for intuitive note-taking and task organization. With smooth animations and smart features, it's built to keep your workflow focused and fluid.
