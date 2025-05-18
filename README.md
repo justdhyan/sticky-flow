@@ -1,4 +1,4 @@
-# StickyFlow 🧠⚡
+# StickyFlow🧠⚡
 ## Organize your thoughts, Supercharge Your Productivity 
 
 ### A sleek, modern note and task management web app.  
