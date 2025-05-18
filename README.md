@@ -11,7 +11,7 @@
 
 ## 🚀 Features Added
 
-- 🟰 **Drag-and-Drop Reordering**  
+- 🖱️ **Drag-and-Drop Reordering**  
   Seamlessly rearrange notes via intuitive drag-and-drop functionality.
 
 - 🧪 **Preloaded Demo Tasks**  
