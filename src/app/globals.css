@@ -1,0 +1,145 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 330 100% 98%;
+    --foreground: 262 10% 30%;
+
+    --card: 0, 0% 100%;
+    --card-foreground: 262 10% 30%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 262 10% 30%;
+
+    --primary: 262 10% 30%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 330 30% 96%;
+    --secondary-foreground: 262 10% 30%;
+
+    --muted: 330 10% 96%;
+    --muted-foreground: 262 5% 50%;
+
+    --accent: 210 20% 86%;
+    --accent-foreground: 262 10% 30%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 330 20% 90%;
+    --input: 330 20% 90%;
+    --ring: 262 10% 30%;
+    --radius: 0.5rem;
+
+    /* Sticky note colors */
+    --note-yellow: 48 100% 85%;
+    --note-pink: 330 100% 90%;
+    --note-blue: 210 100% 90%;
+    --note-green: 120 60% 90%;
+    --note-purple: 270 80% 92%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    /* Sticky note colors - dark theme */
+    --note-yellow: 48 70% 75%;
+    --note-pink: 330 70% 80%;
+    --note-blue: 210 70% 80%;
+    --note-green: 120 50% 80%;
+    --note-purple: 270 60% 82%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .sticky-note {
+    @apply rounded-md shadow-md transition-all duration-200 hover:shadow-lg;
+    transform-origin: center;
+  }
+
+  .sticky-note-yellow {
+    background-color: hsl(var(--note-yellow));
+  }
+
+  .sticky-note-pink {
+    background-color: hsl(var(--note-pink));
+  }
+
+  .sticky-note-blue {
+    background-color: hsl(var(--note-blue));
+  }
+
+  .sticky-note-green {
+    background-color: hsl(var(--note-green));
+  }
+
+  .sticky-note-purple {
+    background-color: hsl(var(--note-purple));
+  }
+}
+
+/* Animations */
+@keyframes popIn {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pop-in {
+  animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--secondary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground) / 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
